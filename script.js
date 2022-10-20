@@ -14,3 +14,9 @@ $("#toggleSongs").css({
 $("#toggleSongs").click(function() {
     $("#song").toggle();
   });
+$("img").css({  
+    "border-radius": "25px",
+    "border": "2px solid #73AD21",
+    "padding": "20px",
+    "width": "200px",
+    "height": "150px",})
