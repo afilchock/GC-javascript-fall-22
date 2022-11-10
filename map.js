@@ -32,3 +32,11 @@ poemMap.on('click', function(e) {
     console.log(latLng.lat);
     console.log(latLng.lng);
 });
+const thaiFood = L.marker([40.775434919229866, -73.94936133592772]).addTo(poemMap);
+thaiFood.bindPopup("<b>PuTawn</b>");
+const polylinetosubway = L.polyline([
+    [40.775434919229866, -73.94936133592772],
+    [40.77605831939465, -73.95281991392618]
+], {
+    color: 'yellow'
+}).addTo(poemMap);
