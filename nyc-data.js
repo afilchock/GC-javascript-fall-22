@@ -75,3 +75,21 @@ $("#neighborhoods").on("click", "li", function() {
     // add a popup to the marker
     L.marker(new L.LatLng(coordinates[0][0][1], coordinates[0][0][0])).bindPopup("<h3>" + neighborhoodText + "</h3>").addTo(nycMap);
 });
+L.geoJSON(nyc, {
+    style: function(feature) {
+        // challenge 3
+        if (feature.properties.borough === "Manhattan") {
+            return {
+                color: "blue",
+                fillColor: "red",
+                fillOpacity: 0.3
+            };
+        } else {
+            return {
+                color: "blue",
+                fillColor: "yellow",
+                fillOpacity: 0.3
+            };
+        }
+    }
+}).addTo(nycMap);
